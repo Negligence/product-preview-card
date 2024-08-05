@@ -10,12 +10,14 @@ html {
   height: 100%;
   width: 100%;
 
-  --yellow: hsl(47, 88%, 63%);
   --white: hsl(0, 0%, 100%);
-  --gray-500: hsl(0, 0%, 42%);
-  --gray-950: hsl(0, 0%, 7%);
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
 
-  --ff-body: "Figtree", sans-serif;
+  --ff-head: "Fraunces", serif;
+  --ff-body: "Montserrat", sans-serif;
 
   --fz-1: calc(24 / 16 * 1rem);
   --fz-2: calc(16 / 16 * 1rem);
