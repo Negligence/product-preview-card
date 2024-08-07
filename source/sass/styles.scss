@@ -11,17 +11,18 @@ html {
   width: 100%;
 
   --white: hsl(0, 0%, 100%);
-  --dark-cyan: hsl(158, 36%, 37%);
   --cream: hsl(30, 38%, 92%);
-  --very-dark-blue: hsl(212, 21%, 14%);
-  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --aurometal-saurus: hsl(228, 12%, 48%);
+  --deep-aquamarine: hsl(158, 36%, 37%);
+  --deep-aquamarine-hover: hsl(157, 43%, 18%);
+  --gunmetal: hsl(212, 21%, 14%);
 
   --ff-head: "Fraunces", serif;
   --ff-body: "Montserrat", sans-serif;
 
-  --fz-1: calc(24 / 16 * 1rem);
-  --fz-2: calc(16 / 16 * 1rem);
-  --fz-3: calc(14 / 16 * 1rem);
+  --fz-1: calc(32 / 16 * 1rem);
+  --fz-2: calc(14 / 16 * 1rem);
+  --fz-3: calc(12 / 16 * 1rem);
 
   --s-500: calc(40 / 16 * 1rem);
   --s-300: calc(24 / 16 * 1rem);
@@ -40,7 +41,7 @@ body {
   height: inherit;
   font-optical-sizing: auto;
   font-family: var(--ff-body);
-  background-color: var(--yellow);
+  background-color: var(--cream);
 }
 
 .attribution {
@@ -50,17 +51,17 @@ body {
   bottom: 1rem;
   font-size: rem(11px);
   text-align: center;
-  color: var(--white);
+  color: var(--aurometal-saurus);
 }
 
 .attribution a {
   transition: .4s;
-  color: var(--white);
+  color: var(--aurometal-saurus);
 }
 
 .attribution a:hover,
 .attribution a:visited {
-  color: var(--gray-950);
+  color: var(--deep-aquamarine);
   text-decoration: none;
 }
 /* #endregion Defaults */
@@ -70,28 +71,29 @@ body {
   display: grid;
 }
 
-.text-preset-1 {
+.text-display {
   font-size: var(--fz-1);
-  font-weight: 800;
-  line-height: 1.5em;
+  font-weight: 700;
+  line-height: 1em;
 }
 
-.text-preset-2 {
+.text-body {
   font-size: var(--fz-2);
   font-weight: 500;
-  line-height: 1.5em;
+  line-height: em(23px, 14px);
 }
 
-.text-preset-3 {
+.text-button {
+  font-size: var(--fz-2);
+  font-weight: 700;
+  line-height: auto;
+}
+
+.text-overline {
   font-size: var(--fz-3);
   font-weight: 500;
-  line-height: 1.5em;
-}
-
-.text-preset-3-bold {
-  font-size: var(--fz-3);
-  font-weight: 800;
-  line-height: 1.5em;
+  line-height: auto;
+  letter-spacing: rem(5px);
 }
 /* #endregion Reusable CSS */
 
@@ -103,127 +105,20 @@ main {
   place-content: center;
 }
 
-.card {
-  width: rem(327px);
-  height: rem(501px);
-  background-color: var(--white);
-  border-radius: rem(20px);
-  gap: var(--s-300);
-  padding: var(--s-300);
-  border: rem(1px) inset var(--gray-950);
-  box-shadow: rem(8px) rem(8px) 0 black;
-  justify-items: start;
-}
-
-.blog-image {
-  width: 100%;
-  height: rem(200px);
-  border-radius: rem(10px);
-  justify-self: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.content {
-  gap: var(--s-150);
-}
-
-.category {
-  display: flex;
-  column-gap: var(--s-100);
-}
-
-.category a {
-  display: inline-block;
-  text-decoration: none;
-  background-color: var(--yellow);
-  color: var(--gray-950);
-  padding: var(--s-50) var(--s-150);
-  border-radius: var(--s-50);
-  font-size: var(--s-150);
-}
-
-.publish-date {
-  font-size: var(--s-150);
-}
-
-.title {
-  font-size: rem(20px);
-  transition: color .4s;
-
-}
-
-.description {
-  color: var(--gray-500);
-}
-
-.author {
-  display: flex;
-  align-items: center;
-  column-gap: var(--s-150);
-}
-
-.user-pic {
-  width: rem(32px);
-  height: rem(32px);
-}
 /* #endregion Mobile 375px */
 
 /* #region Extra Small 320px */
 @include desktop-media-query(374px) {
-  .card {
-    width: rem(280px);
-    height: auto;
-    gap: var(--s-200);
-    padding: var(--s-200);
-  }
-  
-  .content {
-    gap: var(--s-100);
-  }
+
 }
 /* #endregion Extra Small 320px */
 
 /* #region Desktop 1440px */
 @include mobile-media-query(1440px) {
-  .card {
-    width: rem(384px);
-    height: rem(522px);
-  }
-  
-  .blog-image {
-    width: rem(336px);
-  }
-  
-  .category a,
-  .publish-date {
-    font-size: var(--fz-3);
-  }
-  
-  .title {
-    font-size: var(--fz-1);
-  }
-  
-  .description {
-    font-size: var(--fz-2);
-  }
-  
-  .author {
-    display: flex;
-    align-items: center;
-    column-gap: var(--s-150);
-  }
-  
-  .user-pic {
-    width: rem(32px);
-    height: rem(32px);
-  }
+
 }
 
 /* Desktop Active */
-.title:hover {
-  color: var(--yellow);
-  cursor: pointer;
-}
+
 
 /* #endregion Desktop 1440px */
