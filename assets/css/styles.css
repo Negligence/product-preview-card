@@ -67,6 +67,7 @@ body {
 }
 
 .text-display {
+  font-family: var(--ff-head);
   font-size: var(--fz-1);
   font-weight: 700;
   line-height: 1em;
@@ -79,6 +80,7 @@ body {
 }
 
 .text-button {
+  font-family: var(--ff-body);
   font-size: var(--fz-2);
   font-weight: 700;
   line-height: auto;
@@ -89,6 +91,7 @@ body {
   font-weight: 500;
   line-height: auto;
   letter-spacing: 0.3125rem;
+  text-transform: uppercase;
 }
 
 /* #endregion Reusable CSS */
