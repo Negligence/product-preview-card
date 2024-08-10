@@ -103,6 +103,26 @@ main {
   place-content: center;
 }
 
+.card {
+  width: 21.4375rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+
+.card-img {
+  line-height: 0;
+}
+
+.card-content {
+  background-color: var(--white);
+  padding: var(--s-300);
+  row-gap: 1.125rem;
+}
+
+.category {
+  color: var(--aurometal-saurus);
+}
+
 /* #endregion Mobile 375px */
 /* #region Extra Small 320px */
 /* #endregion Extra Small 320px */
