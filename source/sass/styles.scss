@@ -128,6 +128,43 @@ main {
   color: var(--aurometal-saurus) ;
 }
 
+.title {
+  color: var(--gunmetal);
+}
+
+.description {
+  color: var(--aurometal-saurus);
+}
+
+.price {
+  grid-auto-flow: column;
+  justify-content: start;
+  column-gap: rem(19px);
+}
+
+.price-new {
+  color: var(--deep-aquamarine);
+}
+
+.price-old {
+  color: var(--aurometal-saurus);
+  font-size: rem(13px);
+  font-weight: 500;
+  line-height: em(13px, 23px);
+  align-self: center;
+  text-decoration: line-through;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  column-gap: var(--s-150);
+  background-color: var(--deep-aquamarine);
+  color: var(--white);
+  border: none;
+  border-radius: var(--s-100);
+  padding: rem(14px);
+}
 /* #endregion Mobile 375px */
 
 /* #region Extra Small 320px */
