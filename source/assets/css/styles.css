@@ -51,7 +51,7 @@ body {
 
 .attribution a {
   transition: 0.4s;
-  color: var(--aurometal-saurus);
+  color: var(--gunmetal);
 }
 
 .attribution a:hover,
@@ -163,6 +163,40 @@ main {
 
 /* #endregion Mobile 375px */
 /* #region Extra Small 320px */
+@media only screen and (max-width: 23.375em) {
+  .card {
+    width: 17.5rem;
+  }
+  .card-img {
+    width: 17.5rem;
+    overflow: hidden;
+  }
+  .card-content {
+    row-gap: var(--s-150);
+  }
+  .category {
+    font-size: 0.625rem;
+  }
+  .title {
+    font-size: 1.625rem;
+  }
+  .description {
+    font-size: 0.75rem;
+  }
+  .price {
+    column-gap: 0.875rem;
+  }
+  .price-new {
+    font-size: 1.75rem;
+  }
+  .price-old {
+    font-size: 0.75rem;
+  }
+  .button {
+    column-gap: var(--s-100);
+    padding: 0.625rem;
+  }
+}
 /* #endregion Extra Small 320px */
 /* #region Desktop 1440px */
 /* Desktop Active */
