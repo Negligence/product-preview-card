@@ -52,8 +52,8 @@ The designs were created to the following widths:
 
 ### Links
 
-- Solution URL: [Github Repo](https://github.com/Negligence/blog-preview-card)
-- Live Site URL: [Github Pages](https://negligence.github.io/blog-preview-card/)
+- Solution URL: [Github Repo](https://github.com/Negligence/product-preview-card)
+- Live Site URL: [Github Pages](https://negligence.github.io/product-preview-card/)
 
 ## My process
 
