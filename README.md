@@ -68,30 +68,101 @@ The designs were created to the following widths:
 
 ### What I learned
 
-I learned the benefit of wrapping a container on my img
+I learned to tweak and rename the design containers in figma for to make it easier to translate it to html code structure.
 
 ```html
-      <div class="blog-image grid">
-        <img src="./assets/images/illustration-article.svg" alt="Article Illustration">
-      </div>
+<article class="card grid">
+
+  <div class="card-img">
+    <img src="./assets/images/image-product-mobile.jpg" alt="Mobile Image" width="343" height="240">
+    <img src="./assets/images/image-product-desktop.jpg" alt="Desktop Image">
+  </div>
+
+  <div class="card-content grid">
+
+    <span class="category text-overline">Perfume</span>
+    
+    <h1 class="title text-display">Gabrielle Essence Eau De Parfum</h1>
+    
+    <p class="description text-body">
+      A floral, solar and voluptuous interpretation composed by Olivier Polge,
+      Perfumer-Creator for the House of CHANEL.
+    </p>
+    
+    <div class="price grid">
+      <span class="price-new text-display">$149.99</span>
+      <span class="price-old">$169.99</span>
+    </div>
+    
+    <button class="button text-button">
+      <img src="./assets/images/icon-cart.svg" alt="Cart Icon">
+      Add to Cart
+    </button>
+    
+  </div>
+  
+</article>
 ```
 
-In this particular design, it was needed because the resizing image itself did not reflect the design.
-I needed to set a smaller container size, added ```overflow:hidden;``` to hide the extra contents, and also add display grid to be able to set ```justify-content: center;``` to the cropped image.
+I also found it handy to create classes based on the figma design local styles.
 
-```css
-.blog-image {
+```scss
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
   width: 100%;
-  height: rem(200px);
-  border-radius: rem(10px);
-  justify-self: center;
-  justify-content: center;
-  overflow: hidden;
+
+  --white: hsl(0, 0%, 100%);
+  --cream: hsl(30, 38%, 92%);
+  --aurometal-saurus: hsl(228, 12%, 48%);
+  --deep-aquamarine: hsl(158, 36%, 37%);
+  --deep-aquamarine-hover: hsl(157, 43%, 18%);
+  --gunmetal: hsl(212, 21%, 14%);
+
+  --ff-head: "Fraunces", serif;
+  --ff-body: "Montserrat", sans-serif;
+
+  --fz-1: calc(32 / 16 * 1rem);
+  --fz-2: calc(14 / 16 * 1rem);
+  --fz-3: calc(12 / 16 * 1rem);
+
+  --s-500: calc(40 / 16 * 1rem);
+  --s-300: calc(24 / 16 * 1rem);
+  --s-200: calc(16 / 16 * 1rem);
+  --s-150: calc(12 / 16 * 1rem);
+  --s-100: calc(8 / 16 * 1rem);
+  --s-50: calc(4 / 16 * 1rem);
+}
+
+.text-display {
+  font-family: var(--ff-head);
+  font-size: var(--fz-1);
+  font-weight: 700;
+  line-height: 1em;
+}
+
+.text-body {
+  font-size: var(--fz-2);
+  font-weight: 500;
+  line-height: em(23px, 14px);
+}
+
+.text-button {
+  font-family: var(--ff-body);
+  font-size: var(--fz-2);
+  font-weight: 700;
+  line-height: auto;
+}
+
+.text-overline {
+  font-size: var(--fz-3);
+  font-weight: 500;
+  line-height: auto;
+  letter-spacing: rem(5px);
+  text-transform: uppercase;
 }
 ```
-
-I'm very happy to be able to use my mixins ```@include mobile-media-query(1440px)``` and ```@include desktop-media-query(374px)```.
-From now on this is how I'm going to create my media queries.
 
 ### Continued development
 
