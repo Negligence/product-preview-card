@@ -68,7 +68,7 @@ The designs were created to the following widths:
 
 ### What I learned
 
-I learned to tweak and rename the design containers in figma for to make it easier to translate it to html code structure.
+I learned to tweak and rename the design containers in figma to make it easier to translate it to html code structure.
 
 ```html
 <article class="card grid">
