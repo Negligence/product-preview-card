@@ -110,12 +110,7 @@ main {
 }
 
 .card-img {
-  width: 100%;
   line-height: 0;
-}
-
-.card-img img[src*=desktop] {
-  display: none;
 }
 
 .card-content {
@@ -176,7 +171,6 @@ main {
     width: 17.5rem;
   }
   .card-img {
-    width: 17.5rem;
     overflow: hidden;
   }
   .card-content {
@@ -206,19 +200,12 @@ main {
   }
 }
 /* #endregion Extra Small 320px */
-/* #region Desktop 1440px */
-@media only screen and (min-width: 90em) {
+/* #region Desktop 768px */
+@media only screen and (min-width: 48em) {
   .card {
     width: 37.5rem;
     height: 28.125rem;
     grid-auto-flow: column;
-  }
-  .card-img img[src*=mobile] {
-    display: none;
-  }
-  .card-img img[src*=desktop] {
-    display: block;
-    height: 28.125rem;
   }
   .card-content {
     padding: 2rem;
@@ -235,4 +222,4 @@ main {
   outline-color: var(--deep-aquamarine);
 }
 
-/* #endregion Desktop 1440px */
+/* #endregion Desktop 768px */
